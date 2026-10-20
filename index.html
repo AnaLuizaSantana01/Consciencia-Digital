@@ -1,41 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consiência Digital</title>
+    <title>Consciência Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
+
 <header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">O que é uma IA</a>
-        <a href="#">Impacto das IAs</a>
-        <a href="#">Boas Praticas</a>
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">Consciência <span class="text-primary">Digital</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#o-que-e-uma-ia">O que é uma IA</a>
+                    <a class="nav-link" href="#impacto-das-ias">Impacto das IAs</a>
+                    <a class="nav-link" href="#boas-praticas">Boas Práticas</a>
+                </div>
+            </div>
+        </div>
     </nav>
 </header>
-    <section id="Home" class="container">
-        <h1>Você sabe ultilizar uma IA? </h1>
-        <img src="" alt="possivelmente um carrosel automatico de foto de IAs">
+
+<main>
+    <!-- HOME -->
+    <section id="home" class="container container-home">
+        <h1 class="display-5 mb-4">Você sabe <span>utilizar</span> uma IA?</h1>
+
+        <!-- Carrossel automático (trocar os .slide por <img> das IAs) -->
+        <div id="carrosselIAs" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <div class="slide">Imagem de IA 1</div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="slide">Imagem de IA 2</div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="slide">Imagem de IA 3</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- O QUE É UMA IA -->
-    <section id="O que é uma IA" class="segunda-estrutura">
-        <h2>O que é uma IA</h2>
-        <p class="explicacao">
-            explicacao do que é com futuras imagens 
-        </p>
+    <section id="o-que-e-uma-ia" class="segunda-estrutura">
+        <div class="container">
+            <h2 class="mb-3">O que é uma <span>IA</span></h2>
+            <p class="explicacao">
+                Explicação do que é, com futuras imagens.
+            </p>
+        </div>
     </section>
 
-    <section id="Impacto das IAs" class="terceira-estrutura">
-        <h1>sistema de arcodeao para ser adicionado dps
-                LINK PARA O OS RESUMOS 
-        </h1>
+    <!-- IMPACTO DAS IAs -->
+    <section id="impacto-das-ias" class="terceira-estrutura">
+        <div class="container">
+            <h2 class="mb-4">Impacto das <span>IAs</span></h2>
+
+            <div class="accordion" id="accordionImpacto">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseUm" aria-expanded="true" aria-controls="collapseUm">
+                            Item #1
+                        </button>
+                    </h2>
+                    <div id="collapseUm" class="accordion-collapse collapse show" data-bs-parent="#accordionImpacto">
+                        <div class="accordion-body">
+                            Conteúdo do resumo 1. Link para os resumos será adicionado depois.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseDois" aria-expanded="false" aria-controls="collapseDois">
+                            Item #2
+                        </button>
+                    </h2>
+                    <div id="collapseDois" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
+                        <div class="accordion-body">
+                            Conteúdo do resumo 2.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTres" aria-expanded="false" aria-controls="collapseTres">
+                            Item #3
+                        </button>
+                    </h2>
+                    <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
+                        <div class="accordion-body">
+                            Conteúdo do resumo 3.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- BOAS PRÁTICAS -->
+    <section id="boas-praticas" class="container">
+        <h2 class="mb-3">Boas <span>Práticas</span></h2>
+        <p>Conteúdo a ser adicionado.</p>
+    </section>
+</main>
 
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

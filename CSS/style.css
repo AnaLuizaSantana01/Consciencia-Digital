@@ -1,0 +1,40 @@
+:root {
+    --preto: #0a0a0f;
+    --azul: #1e6bff;
+    --azul-escuro: #0b2a6b;
+    --branco: #ffffff;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { background: var(--preto); color: var(--branco); }
+
+.navbar { background: var(--preto); border-bottom: 2px solid var(--azul); }
+.navbar .nav-link { color: var(--branco); font-weight: 500; }
+.navbar .nav-link:hover { color: var(--azul); }
+
+section { padding: 3rem 0; }
+h1, h2 { font-weight: 700; }
+h1 span, h2 span { color: var(--azul); }
+
+.container-home { text-align: center; }
+.carousel-item .slide {
+    height: 280px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+    border-radius: 12px; font-size: 1.25rem;
+}
+
+.segunda-estrutura { background: var(--branco); color: var(--preto); }
+.segunda-estrutura h2 { color: var(--azul-escuro); }
+
+/* Accordion nas cores do projeto */
+.accordion {
+    --bs-accordion-bg: var(--preto);
+    --bs-accordion-color: var(--branco);
+    --bs-accordion-border-color: var(--azul);
+    --bs-accordion-btn-color: var(--branco);
+    --bs-accordion-btn-bg: var(--preto);
+    --bs-accordion-active-color: var(--branco);
+    --bs-accordion-active-bg: var(--azul-escuro);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(30, 107, 255, .4);
+}
+.accordion-button::after { filter: invert(1); }
