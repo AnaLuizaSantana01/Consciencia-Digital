@@ -6,8 +6,24 @@
     <title>Consciência Digital</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
+   
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="icone-foto" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="m21 15-5-5L5 21"/>
+        </g>
+    </symbol>
+    <symbol id="icone-linkedin" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/>
+    </symbol>
+</svg>
 
 <header>
     <nav class="navbar navbar-expand-md sticky-top navbar-dark">
@@ -34,8 +50,8 @@
     <section id="home" class="container container-home">
         <h1 class="display-5 mb-4">Você sabe <span>utilizar</span> uma IA?</h1>
 
-        <!-- Carrossel automático (trocar os .slide por <img> das IAs) -->
-        <div id="carrosselIAs" class="carousel slide" data-bs-ride="carousel">
+  
+        <div id="carrosselIAs" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
                     <div class="slide">Imagem de IA 1</div>
@@ -53,19 +69,198 @@
     <!-- O QUE É UMA IA -->
     <section id="o-que-e-uma-ia" class="segunda-estrutura">
         <div class="container">
-            <h2 class="mb-3">O que é uma <span>IA</span></h2>
-            <p class="explicacao">
-                Explicação do que é, com futuras imagens.
+            <h2 class="mb-4 reveal">O que é uma <span>IA</span></h2>
+
+            <!-- Definição -->
+            <div class="row align-items-center g-5 mb-6">
+                <div class="col-lg-7 reveal">
+                    <p class="texto-limpo texto-destaque">
+                        Inteligência artificial (IA) é a área da ciência da computação dedicada a criar máquinas e
+                        programas capazes de realizar tarefas que normalmente exigem inteligência humana, como
+                        aprender, raciocinar, reconhecer padrões e compreender a linguagem.
+                    </p>
+                    <p class="texto-limpo">
+                        Não existe uma definição única. John McCarthy, o pesquisador que deu nome à área, a descreveu
+                        como a ciência e a engenharia de fazer máquinas inteligentes, em especial programas de
+                        computador inteligentes <span class="cit">(McCARTHY, 2007)</span>. Já o manual clássico de
+                        Russell e Norvig organiza as definições em quatro ideias: sistemas que pensam como humanos,
+                        que agem como humanos, que pensam racionalmente e que agem racionalmente
+                        <span class="cit">(RUSSELL; NORVIG, 2021)</span>.
+                    </p>
+                    <p class="texto-limpo">
+                        As IAs que usamos hoje em conversas, imagens e tradução são, em sua maioria, sistemas de
+                        aprendizado de máquina. Em vez de seguir regras escritas uma a uma por programadores, elas
+                        aprendem padrões a partir de enormes quantidades de dados
+                        <span class="cit">(LeCUN; BENGIO; HINTON, 2015)</span>. Por isso, a IA é muito boa em
+                        reconhecer padrões, mas isso não significa que ela entenda o mundo como uma pessoa, nem que
+                        suas respostas estejam sempre corretas.
+                    </p>
+                </div>
+                <div class="col-lg-5 reveal" style="--delay:.12s">
+               
+                    <div class="foto-espaco foto-4x3">
+                        <svg width="44" height="44" aria-hidden="true"><use href="#icone-foto"/></svg>
+                        <span>Espaço para foto</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Como surgiu -->
+            <h3 class="subtitulo reveal">Como a IA surgiu</h3>
+            <p class="texto-limpo reveal mb-4">
+                A IA não nasceu de uma só invenção. Ela é resultado de ideias da matemática, da lógica, da
+                neurociência e da computação, construídas ao longo de décadas.
             </p>
+
+            <ol class="linha-tempo">
+                <li class="reveal">
+                    <span class="ano">1943</span>
+                    <div class="evento">
+                        <h4>O neurônio artificial</h4>
+                        <p>Warren McCulloch e Walter Pitts propõem um modelo matemático inspirado no neurônio e mostram
+                            que redes de unidades simples podem realizar operações lógicas. É a base das redes neurais
+                            <span class="cit">(McCULLOCH; PITTS, 1943)</span>.</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">1950</span>
+                    <div class="evento">
+                        <h4>Máquinas podem pensar?</h4>
+                        <p>Alan Turing publica "Computing Machinery and Intelligence", em que troca essa pergunta por
+                            um experimento prático, o "jogo da imitação", hoje conhecido como teste de Turing
+                            <span class="cit">(TURING, 1950)</span>.</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">1956</span>
+                    <div class="evento">
+                        <h4>O nascimento oficial da área</h4>
+                        <p>McCarthy, Minsky, Rochester e Shannon propõem, em 1955, um encontro de verão no Dartmouth
+                            College, nos Estados Unidos. A proposta usa o termo "inteligência artificial", e o evento
+                            de 1956 é visto como o marco de fundação do campo
+                            <span class="cit">(McCARTHY et al., 1955)</span>.</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">1969–1973</span>
+                    <div class="evento">
+                        <h4>Limites e críticas</h4>
+                        <p>Minsky e Papert apontam limitações dos perceptrons de camada única
+                            <span class="cit">(MINSKY; PAPERT, 1969)</span>, e o relatório de Lighthill critica os
+                            resultados da área <span class="cit">(LIGHTHILL, 1973)</span>. Os investimentos diminuem
+                            no período conhecido como "inverno da IA".</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">1986</span>
+                    <div class="evento">
+                        <h4>Redes que aprendem em várias camadas</h4>
+                        <p>Rumelhart, Hinton e Williams popularizam a retropropagação, um método para treinar redes
+                            neurais com várias camadas <span class="cit">(RUMELHART; HINTON; WILLIAMS, 1986)</span>.</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">2012</span>
+                    <div class="evento">
+                        <h4>A virada do aprendizado profundo</h4>
+                        <p>Uma rede neural profunda treinada com placas de vídeo vence a competição de reconhecimento
+                            de imagens ImageNet por ampla margem
+                            <span class="cit">(KRIZHEVSKY; SUTSKEVER; HINTON, 2012)</span>.</p>
+                    </div>
+                </li>
+                <li class="reveal">
+                    <span class="ano">2017</span>
+                    <div class="evento">
+                        <h4>A arquitetura Transformer</h4>
+                        <p>Pesquisadores apresentam o Transformer, modelo baseado em "atenção" que se tornou a base
+                            dos grandes modelos de linguagem usados hoje em chats de IA
+                            <span class="cit">(VASWANI et al., 2017)</span>.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <!-- Primeiros protótipos -->
+            <h3 class="subtitulo reveal mt-6">Os primeiros protótipos</h3>
+            <p class="texto-limpo reveal mb-4">
+                Antes dos chats de hoje, estes programas e máquinas mostraram que era possível ensinar um computador
+                a demonstrar, aprender e conversar.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-sm-6 col-lg-3 reveal">
+                    <article class="card proto-card h-100">
+                    
+                        <div class="foto-espaco foto-4x3 rounded-0">
+                            <svg width="36" height="36" aria-hidden="true"><use href="#icone-foto"/></svg>
+                            <span>Espaço para foto</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="proto-ano">1956</span>
+                            <h4 class="h5">Logic Theorist</h4>
+                            <p class="card-text">Criado por Allen Newell, Herbert Simon e Cliff Shaw, provava teoremas de
+                                lógica matemática e costuma ser citado como o primeiro programa de IA.</p>
+                            <p class="proto-fonte mt-auto mb-0">Fonte: Newell e Simon (1956)</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3 reveal" style="--delay:.08s">
+                    <article class="card proto-card h-100">
+                       
+                        <div class="foto-espaco foto-4x3 rounded-0">
+                            <svg width="36" height="36" aria-hidden="true"><use href="#icone-foto"/></svg>
+                            <span>Espaço para foto</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="proto-ano">1958</span>
+                            <h4 class="h5">Perceptron</h4>
+                            <p class="card-text">Frank Rosenblatt propõe uma rede neural simples que aprende a classificar
+                                padrões a partir de exemplos. Foi construída em uma máquina, o Mark I Perceptron.</p>
+                            <p class="proto-fonte mt-auto mb-0">Fonte: Rosenblatt (1958)</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3 reveal" style="--delay:.16s">
+                    <article class="card proto-card h-100">
+                       
+                        <div class="foto-espaco foto-4x3 rounded-0">
+                            <svg width="36" height="36" aria-hidden="true"><use href="#icone-foto"/></svg>
+                            <span>Espaço para foto</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="proto-ano">1959</span>
+                            <h4 class="h5">Jogador de damas</h4>
+                            <p class="card-text">Arthur Samuel criou na IBM um programa que melhorava seu desempenho jogando
+                                partidas. Em seu artigo, ele usa o termo "aprendizado de máquina".</p>
+                            <p class="proto-fonte mt-auto mb-0">Fonte: Samuel (1959)</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-sm-6 col-lg-3 reveal" style="--delay:.24s">
+                    <article class="card proto-card h-100">
+                     
+                        <div class="foto-espaco foto-4x3 rounded-0">
+                            <svg width="36" height="36" aria-hidden="true"><use href="#icone-foto"/></svg>
+                            <span>Espaço para foto</span>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <span class="proto-ano">1966</span>
+                            <h4 class="h5">ELIZA</h4>
+                            <p class="card-text">Joseph Weizenbaum, do MIT, criou um programa que conversava por texto usando
+                                regras sobre frases. Ele mostrou como é fácil sentir-se compreendido por uma máquina.</p>
+                            <p class="proto-fonte mt-auto mb-0">Fonte: Weizenbaum (1966)</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- IMPACTO DAS IAs -->
     <section id="impacto-das-ias" class="terceira-estrutura">
         <div class="container">
-            <h2 class="mb-4">Impacto das <span>IAs</span></h2>
+            <h2 class="mb-4 reveal">Impacto das <span>IAs</span></h2>
 
-            <div class="accordion" id="accordionImpacto">
+            <div class="accordion reveal" id="accordionImpacto">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -76,23 +271,22 @@
                     <div id="collapseUm" class="accordion-collapse collapse show" data-bs-parent="#accordionImpacto">
                         <div class="accordion-body">
                             <p>Atualmente, muitas pessoas estão recorrendo à inteligência artificial não apenas para tirar dúvidas, mas também para conversar, pedir conselhos e buscar algum tipo de acolhimento.
-                                Isso acontece porque a IA está disponível a qualquer momento, responde rapidamente e costuma usar uma linguagem atenciosa. 
+                                Isso acontece porque a IA está disponível a qualquer momento, responde rapidamente e costuma usar uma linguagem atenciosa.
                                 Dessa forma, ela pode transmitir a sensação de que o usuário está sendo ouvido, mesmo sem existir uma pessoa do outro lado da tela.
-                                </p>
-                            <p>As relações humanas, por outro lado, exigem esforço, paciência, atenção e respeito pelo espaço do outro. 
+                            </p>
+                            <p>As relações humanas, por outro lado, exigem esforço, paciência, atenção e respeito pelo espaço do outro.
                                 Uma pessoa nem sempre estará disponível, compreenderá perfeitamente o que estamos sentindo ou concordará com o que dizemos.
-                                A IA parece mais conveniente justamente porque foi desenvolvida para responder às solicitações do usuário. 
+                                A IA parece mais conveniente justamente porque foi desenvolvida para responder às solicitações do usuário.
                                 No entanto, apesar de conseguir manter conversas naturais, ela não possui sentimentos, consciência ou experiências próprias.
                             </p>
                             <p>O problema começa quando essa facilidade faz com que as interações com outras pessoas pareçam trabalhosas demais.
                                 Se alguém se acostuma a procurar a IA sempre que enfrenta um conflito ou desconforto, pode começar a evitar conversas difíceis, encontros sociais e opiniões diferentes.
-                                Aos poucos, essa pessoa pode se tornar emocionalmente dependente da ferramenta e perder parte da disposição para construir e manter relações reais. 
+                                Aos poucos, essa pessoa pode se tornar emocionalmente dependente da ferramenta e perder parte da disposição para construir e manter relações reais.
                             </p>
-                            <p>Por isso, a inteligência artificial deve ser usada como apoio, não como substituta das conexões humanas. 
+                            <p>Por isso, a inteligência artificial deve ser usada como apoio, não como substituta das conexões humanas.
                                 Ela pode ajudar em pesquisas, estudos, organização de ideias e dúvidas do cotidiano, mas não deve ocupar o lugar de amigos, familiares ou profissionais qualificados.
                                 A IA pode facilitar a comunicação e até ajudar alguém a estruturar o que deseja expressar, porém os vínculos verdadeiros ainda dependem da presença, da troca e da convivência entre as pessoas.
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -106,23 +300,22 @@
                     </h2>
                     <div id="collapseDois" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
                         <div class="accordion-body">
-                            <p>O hábito da leitura tem perdido espaço entre muitos jovens, principalmente diante de conteúdos rápidos, redes sociais e ferramentas que oferecem respostas prontas. 
+                            <p>O hábito da leitura tem perdido espaço entre muitos jovens, principalmente diante de conteúdos rápidos, redes sociais e ferramentas que oferecem respostas prontas.
                                 Manter a atenção em um livro ou texto extenso pode parecer mais difícil quando a pessoa se acostuma a receber informações curtas e imediatas.
                                 Além disso, dificuldades de interpretação podem tornar a leitura cansativa, fazendo com que alguns estudantes abandonem esse hábito ou leiam apenas quando são obrigados por exigências escolares ou acadêmicas.
                             </p>
-                            <p>Esse afastamento da literatura não representa somente uma mudança na forma de entretenimento, mas traz impactos profundos ao desenvolvimento intelectual. 
-                                A leitura contribui diretamente para a expansão do vocabulário, da criatividade, da escrita e da capacidade de interpretação de textos complexos. 
+                            <p>Esse afastamento da literatura não representa somente uma mudança na forma de entretenimento, mas traz impactos profundos ao desenvolvimento intelectual.
+                                A leitura contribui diretamente para a expansão do vocabulário, da criatividade, da escrita e da capacidade de interpretação de textos complexos.
                                 Também permite que o leitor conheça diferentes realidades, compreenda outros pontos de vista e desenvolva suas próprias conclusões, um processo que se perde quando obras completas são substituídas apenas por resumos rápidos.
                             </p>
                             <p>A inteligência artificial pode agravar esse problema quando passa a ser usada para produzir análises inteiras, responder atividades ou resumir livros que o estudante sequer chegou a abrir.
-                                Nesses casos, a tarefa escolar pode até ser entregue no prazo, mas o aprendizado real dificilmente será completo ou absorvido. 
+                                Nesses casos, a tarefa escolar pode até ser entregue no prazo, mas o aprendizado real dificilmente será completo ou absorvido.
                                 Receber uma interpretação pronta de um algoritmo é muito diferente de acompanhar uma narrativa, perceber as nuances do texto e construir uma opinião verdadeiramente própria sobre a obra.
                             </p>
-                            <p>Ainda assim, a IA pode atuar como uma excelente ferramenta de apoio à leitura, desde que usada com critério. 
-                                Ela pode explicar o significado de palavras desconhecidas, esclarecer trechos difíceis, contextualizar o momento histórico de uma obra e ajudar na própria organização de uma análise textual. 
+                            <p>Ainda assim, a IA pode atuar como uma excelente ferramenta de apoio à leitura, desde que usada com critério.
+                                Ela pode explicar o significado de palavras desconhecidas, esclarecer trechos difíceis, contextualizar o momento histórico de uma obra e ajudar na própria organização de uma análise textual.
                                 O caminho mais adequado é realizar a leitura atenta primeiro e recorrer à ferramenta apenas quando surgir uma dúvida pontual, garantindo que a tecnologia contribua para a compreensão sem anular o esforço necessário para aprender.
                             </p>
-                        
                         </div>
                     </div>
                 </div>
@@ -136,7 +329,7 @@
                     </h2>
                     <div id="collapseTres" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
                         <div class="accordion-body">
-                            <p>Com a facilidade de acesso à informação, criou-se o hábito de esperar que qualquer dúvida seja resolvida imediatamente. 
+                            <p>Com a facilidade de acesso à informação, criou-se o hábito de esperar que qualquer dúvida seja resolvida imediatamente.
                                 Buscadores, redes sociais e inteligências artificiais oferecem respostas em poucos segundos, o que torna a pesquisa muito mais prática no dia a dia.
                                 No entanto, essa velocidade também pode diminuir a disposição dos estudantes para investigar, refletir e desenvolver uma solução por conta própria.
                             </p>
@@ -144,15 +337,14 @@
                                 Quando alguém recebe uma explicação pronta e apenas a reproduz, pode ter a falsa impressão de que aprendeu, mesmo sem conseguir explicar o conteúdo com as próprias palavras.
                                 Com isso, o resultado final passa a ser mais valorizado do que o processo de raciocínio que deveria levar até ele.
                             </p>
-                            <p>Essa busca constante por rapidez também pode afetar a atenção e a memória a longo prazo. 
+                            <p>Essa busca constante por rapidez também pode afetar a atenção e a memória a longo prazo.
                                 Se todas as informações parecem estar sempre disponíveis ao alcance de um clique, existe menos incentivo para guardá-las ou relacioná-las com conhecimentos anteriores.
                                 Aos poucos, atividades que exigem concentração, leitura e análise podem parecer desnecessariamente demoradas, embora sejam justamente essas etapas que tornam o aprendizado mais duradouro.
                             </p>
-                            <p>Nesse contexto, a IA deve ser usada para acompanhar o raciocínio, e não para eliminá-lo do processo educacional. 
+                            <p>Nesse contexto, a IA deve ser usada para acompanhar o raciocínio, e não para eliminá-lo do processo educacional.
                                 Antes de pedir uma resposta automática, o usuário pode tentar compreender a questão, levantar hipóteses e registrar o que já sabe sobre o tema.
                                 Depois, pode utilizar a ferramenta para comparar ideias, esclarecer dúvidas específicas ou receber comentários sobre o que produziu, mantendo o protagonismo do próprio aprendizado.
                             </p>
-                            
                         </div>
                     </div>
                 </div>
@@ -166,23 +358,22 @@
                     </h2>
                     <div id="collapseQuatro" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
                         <div class="accordion-body">
-                             <p>O uso frequente da inteligência artificial em atividades que antes exigiam esforço humano pode colocar o pensamento crítico em segundo plano. 
+                            <p>O uso frequente da inteligência artificial em atividades que antes exigiam esforço humano pode colocar o pensamento crítico em segundo plano.
                                 Quando o usuário transfere constantemente para a tecnologia a tarefa de formular ideias, resolver problemas e tomar decisões, deixa de exercitar habilidades necessárias para pensar de forma independente.
                                 Com o tempo, a falta desse estímulo cognitivo pode comprometer a autonomia intelectual do indivíduo.
-                             </p>
-                             <p>A facilidade de receber respostas completas pode criar uma dependência profunda, inclusive para a realização de tarefas cotidianas simples. 
+                            </p>
+                            <p>A facilidade de receber respostas completas pode criar uma dependência profunda, inclusive para a realização de tarefas cotidianas simples.
                                 Além disso, como a IA costuma apresentar informações com clareza e segurança, algumas pessoas tendem a aceitá-las como verdades absolutas, sem verificar sua origem ou coerência.
                                 No entanto, essas ferramentas também cometem erros, apresentam dados desatualizados ou reproduzem visões limitadas, tornando indispensável o ato de questionar e conferir o conteúdo recebido.
-                             </p>
-                             <p>O pensamento crítico envolve a capacidade de comparar informações, identificar contradições, avaliar a força dos argumentos e, finalmente, formar uma opinião própria. 
+                            </p>
+                            <p>O pensamento crítico envolve a capacidade de comparar informações, identificar contradições, avaliar a força dos argumentos e, finalmente, formar uma opinião própria.
                                 Essas capacidades humanas fundamentais só se desenvolvem e se fortalecem com a prática constante.
                                 Quando todas as etapas do raciocínio são entregues à tecnologia, o usuário pode até concluir a tarefa técnica, mas perde a oportunidade de exercitar sua memória, criatividade e capacidade de argumentação.
-                             </p>
-                             <p>Por fim, a inteligência artificial deve fazer parte do processo de construção do conhecimento, e não produzir sozinha o resultado final. 
+                            </p>
+                            <p>Por fim, a inteligência artificial deve fazer parte do processo de construção do conhecimento, e não produzir sozinha o resultado final.
                                 Ela pode ser muito útil para ajudar a organizar ideias, sugerir diferentes perspectivas sobre um tema, apontar falhas em um argumento e elaborar rascunhos iniciais.
                                 Ainda assim, cabe exclusivamente ao usuário analisar as sugestões, verificar as fontes e decidir o que realmente faz sentido, utilizando a tecnologia como apoio sem abrir mão da própria reflexão.
-                             </p>
-
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -196,36 +387,289 @@
                     </h2>
                     <div id="collapseCinco" class="accordion-collapse collapse" data-bs-parent="#accordionImpacto">
                         <div class="accordion-body">
-                             <p>Apesar de vivermos cada vez mais conectados, muitas pessoas continuam se sentindo isoladas e sozinhas no dia a dia. 
+                            <p>Apesar de vivermos cada vez mais conectados, muitas pessoas continuam se sentindo isoladas e sozinhas no dia a dia.
                                 A facilidade de conversar com uma inteligência artificial a qualquer momento pode oferecer uma sensação imediata de companhia, funcionando como uma alternativa atraente.
                                 Esse cenário se torna ainda mais comum para quem tem dificuldade de se abrir com outras pessoas ou simplesmente não encontra alguém disponível no momento exato em que precisa conversar.
-                             </p>
-                             <p>Essa preferência ocorre porque a IA responde rapidamente, mantém o foco total no usuário e nunca demonstra impaciência ou cansaço. 
+                            </p>
+                            <p>Essa preferência ocorre porque a IA responde rapidamente, mantém o foco total no usuário e nunca demonstra impaciência ou cansaço.
                                 Por isso, conversar com ela pode parecer muito mais simples do que lidar com as relações humanas, que naturalmente envolvem diferenças, limites, frustrações e conflitos.
-                                 No entanto, é preciso lembrar que essa sensação de acolhimento não corresponde a um vínculo real; a inteligência artificial apenas identifica padrões na linguagem para produzir respostas adequadas, sem sentir afeto, preocupação ou empatia.
-                             </p>
-                             <p>O uso ocasional da ferramenta para organizar pensamentos ou esclarecer uma dúvida não significa, por si só, que alguém ficará isolado do mundo. 
+                                No entanto, é preciso lembrar que essa sensação de acolhimento não corresponde a um vínculo real; a inteligência artificial apenas identifica padrões na linguagem para produzir respostas adequadas, sem sentir afeto, preocupação ou empatia.
+                            </p>
+                            <p>O uso ocasional da ferramenta para organizar pensamentos ou esclarecer uma dúvida não significa, por si só, que alguém ficará isolado do mundo.
                                 O risco real aparece quando a tecnologia se torna a principal ou única forma de companhia do indivíduo.
-                                 Ao evitar encontros presenciais, conversas difíceis e situações sociais desafiadoras, a pessoa perde oportunidades valiosas de criar vínculos autênticos, tornando as interações reais cada vez mais difíceis e alimentando um ciclo que aumenta ainda mais a solidão.
-                             </p>
-                             <p>Diante disso, o uso correto da IA deve ser tratá-la sempre como uma ponte para o mundo, e não como o destino final.
+                                Ao evitar encontros presenciais, conversas difíceis e situações sociais desafiadoras, a pessoa perde oportunidades valiosas de criar vínculos autênticos, tornando as interações reais cada vez mais difíceis e alimentando um ciclo que aumenta ainda mais a solidão.
+                            </p>
+                            <p>Diante disso, o uso correto da IA deve ser tratá-la sempre como uma ponte para o mundo, e não como o destino final.
                                 A ferramenta pode ajudar alguém a ensaiar uma conversa importante, organizar sentimentos ou planejar como procurar apoio, mas nunca deve substituir amigos, familiares ou ajuda profissional.
-                                 Combater a solidão de forma eficaz exige investir em relações verdadeiras, onde existam presença física, troca mútua, cuidado real e participação ativa de ambas as partes.
-                             </p>
+                                Combater a solidão de forma eficaz exige investir em relações verdadeiras, onde existam presença física, troca mútua, cuidado real e participação ativa de ambas as partes.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- FRASES SOBRE EDUCAÇÃO -->
+    <section class="citacoes" aria-label="Frases sobre educação">
+        <div class="container">
+            <h2 class="citacoes-titulo reveal">
+                A educação é o futuro. Não podemos deixar que a IA <span>tire esse conhecimento</span> de nós.
+            </h2>
+
+            <div class="row g-4 mt-2">
+                <div class="col-lg-6 reveal">
+                    <figure class="citacao">
+                    
+                        <div class="foto-espaco foto-avatar">
+                            <svg width="28" height="28" aria-hidden="true"><use href="#icone-foto"/></svg>
+                        </div>
+                        <div>
+                            <blockquote class="blockquote">
+                                <p>“A educação é a arma mais poderosa que você pode usar para mudar o mundo.”</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0">Nelson Mandela, em discurso de 2003</figcaption>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-lg-6 reveal" style="--delay:.12s">
+                    <figure class="citacao">
+                    
+                        <div class="foto-espaco foto-avatar">
+                            <svg width="28" height="28" aria-hidden="true"><use href="#icone-foto"/></svg>
+                        </div>
+                        <div>
+                            <blockquote class="blockquote">
+                                <p>“Ensinar não é transferir conhecimento, mas criar as possibilidades para a sua própria produção ou a sua construção.”</p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer mb-0">Paulo Freire, Pedagogia da Autonomia, 1996</figcaption>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- BOAS PRÁTICAS -->
-    <section id="boas-praticas" class="container">
-        <h2 class="mb-3">Boas <span>Práticas</span></h2>
-        <p>Conteúdo a ser adicionado.</p>
+    <section id="boas-praticas" class="container boas-praticas">
+        <h2 class="mb-3 reveal">Boas <span>Práticas</span></h2>
+        <p class="boas-praticas-intro mb-5 reveal">
+            A inteligência artificial é uma ótima ferramenta quando faz parte do caminho, e não quando assume o lugar
+            das pessoas, do estudo e do seu próprio raciocínio. Três hábitos ajudam a usá-la bem.
+        </p>
+
+        <div class="cards-pratica">
+
+            <!-- CARD 1 -->
+            <article class="card card-pratica reveal">
+          
+                <div class="foto-espaco foto-16x10 rounded-0">
+                    <svg width="44" height="44" aria-hidden="true"><use href="#icone-foto"/></svg>
+                    <span>Espaço para foto</span>
+                </div>
+                <h3 class="card-title h5">Use como apoio, não como substituta</h3>
+                <p class="card-text">
+                    A IA responde rápido e nunca demonstra cansaço, mas não sente nem se preocupa com você.
+                    Trate-a como uma ponte para o mundo, e não como o destino final.
+                </p>
+                <ul class="dicas list-unstyled">
+                    <li>Ensaie uma conversa difícil ou organize o que está sentindo, depois fale com a pessoa de verdade.</li>
+                    <li>Busque amigos, familiares ou profissionais qualificados quando precisar de acolhimento.</li>
+                    <li>Observe se está evitando encontros e conflitos só porque falar com a IA é mais fácil.</li>
+                </ul>
+                <a href="#impacto-das-ias" class="card-link-topico">Ler mais em Impacto das IAs</a>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="card card-pratica reveal" style="--delay:.1s">
+         
+                <div class="foto-espaco foto-16x10 rounded-0">
+                    <svg width="44" height="44" aria-hidden="true"><use href="#icone-foto"/></svg>
+                    <span>Espaço para foto</span>
+                </div>
+                <h3 class="card-title h5">Leia e pense primeiro, pergunte depois</h3>
+                <p class="card-text">
+                    Receber uma resposta pronta não é o mesmo que aprender. É o esforço de ler, tentar e
+                    raciocinar que faz o conhecimento durar.
+                </p>
+                <ul class="dicas list-unstyled">
+                    <li>Faça a leitura atenta por conta própria e recorra à IA só para dúvidas pontuais, como uma palavra difícil ou o contexto histórico.</li>
+                    <li>Antes de perguntar, levante hipóteses e anote o que você já sabe sobre o assunto.</li>
+                    <li>Peça comentários sobre o que você escreveu, em vez de pedir o trabalho pronto.</li>
+                </ul>
+                <a href="#impacto-das-ias" class="card-link-topico">Ler mais em Impacto das IAs</a>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="card card-pratica reveal" style="--delay:.2s">
+             
+                <div class="foto-espaco foto-16x10 rounded-0">
+                    <svg width="44" height="44" aria-hidden="true"><use href="#icone-foto"/></svg>
+                    <span>Espaço para foto</span>
+                </div>
+                <h3 class="card-title h5">Questione e confira sempre</h3>
+                <p class="card-text">
+                    A IA escreve com clareza e segurança, mas também erra, usa dados desatualizados e repete
+                    visões limitadas. A decisão final é sua.
+                </p>
+                <ul class="dicas list-unstyled">
+                    <li>Verifique a origem e a coerência das informações antes de aceitá-las como verdade.</li>
+                    <li>Use a IA para rascunhos, novas perspectivas e para apontar falhas no seu argumento.</li>
+                    <li>Analise as sugestões e forme a sua própria opinião, sem entregar todas as etapas do raciocínio.</li>
+                </ul>
+                <a href="#impacto-das-ias" class="card-link-topico">Ler mais em Impacto das IAs</a>
+            </article>
+        </div>
     </section>
 </main>
 
+<!-- RODAPÉ -->
+<footer class="rodape">
+    <div class="container">
+        <div class="row g-5">
+
+            <div class="col-12 col-md-4">
+              
+                <a href="#home" class="logo-espaco" aria-label="Consciência Digital, voltar ao início">
+                    <span>Logo</span>
+                </a>
+                <p class="rodape-nome mt-3 mb-2">Consciência <span>Digital</span></p>
+                <p class="rodape-descricao mb-0">
+                    Um projeto sobre como usar a inteligência artificial com consciência, sem abrir mão das
+                    relações, do estudo e do pensamento crítico.
+                </p>
+            </div>
+
+            <!-- Navegação pelos tópicos -->
+            <div class="col-12 col-md-3">
+                <h3 class="rodape-titulo">Voltar para um tópico</h3>
+                <nav aria-label="Tópicos do site" class="rodape-nav">
+                    <a href="#home">Home</a>
+                    <a href="#o-que-e-uma-ia">O que é uma IA</a>
+                    <a href="#impacto-das-ias">Impacto das IAs</a>
+                    <a href="#boas-praticas">Boas Práticas</a>
+                </nav>
+            </div>
+
+            <!-- Equipe / LinkedIn -->
+            <div class="col-12 col-md-5">
+                <h3 class="rodape-titulo">Quem fez este projeto</h3>
+                <p class="rodape-descricao">Conheça cada integrante da equipe no LinkedIn.</p>
+              
+                <ul class="membros list-unstyled">
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Ana</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Carol</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Gabrielly</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Karol</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Mayara</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Nicolas</a></li>
+
+                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><svg width="16" height="16" aria-hidden="true"><use href="#icone-linkedin"/></svg>Sophia</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rodape-base d-flex flex-column flex-sm-row justify-content-between gap-2">
+            <span>&copy; 2026 Consciência Digital. Todos os direitos reservados.</span>
+            <a href="#home" class="rodape-topo">Voltar ao topo</a>
+        </div>
+    </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+    var reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var animacao = null;
+
+    function suavizar(t) {            
+        easeInOutCubic
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function rolarPara(destino) {
+        var nav = document.querySelector('.navbar');
+        var alturaNav = nav ? nav.offsetHeight : 0;
+        var alvo = destino.id === 'home'
+            ? 0
+            : destino.getBoundingClientRect().top + window.pageYOffset - alturaNav;
+        var inicio = window.pageYOffset;
+        var distancia = alvo - inicio;
+
+        if (reduzirMovimento || Math.abs(distancia) < 2) {
+            window.scrollTo(0, alvo);
+            return;
+        }
+
+    
+        var duracao = Math.min(900, Math.max(450, Math.abs(distancia) * 0.3));
+        var t0 = null;
+
+        function passo(agora) {
+            if (t0 === null) t0 = agora;
+            var progresso = Math.min((agora - t0) / duracao, 1);
+            window.scrollTo(0, inicio + distancia * suavizar(progresso));
+            animacao = progresso < 1 ? requestAnimationFrame(passo) : null;
+        }
+
+        if (animacao) cancelAnimationFrame(animacao);
+        animacao = requestAnimationFrame(passo);
+    }
+
+    // Se a pessoa rolar por conta própria, a animação para
+    ['wheel', 'touchstart', 'keydown'].forEach(function (evento) {
+        window.addEventListener(evento, function () {
+            if (animacao) { cancelAnimationFrame(animacao); animacao = null; }
+        }, { passive: true });
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var id = link.getAttribute('href');
+            if (id.length < 2) return;
+            var destino = document.querySelector(id);
+            if (!destino) return;
+            e.preventDefault();
+
+            try { history.pushState(null, '', id); } catch (erro) { /* ignora */ }
+
+            var menu = document.getElementById('menu');
+            if (menu && menu.classList.contains('show')) {
+                // No celular: fecha o menu primeiro e só depois rola (a altura da navbar muda)
+                menu.addEventListener('hidden.bs.collapse', function () {
+                    rolarPara(destino);
+                }, { once: true });
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            } else {
+                rolarPara(destino);
+            }
+        });
+    });
+
+    /* ANIMACAOES */
+    var itens = document.querySelectorAll('.reveal');
+
+    if (reduzirMovimento || !('IntersectionObserver' in window)) {
+        itens.forEach(function (item) { item.classList.add('visivel'); });
+    } else {
+        var observador = new IntersectionObserver(function (entradas) {
+            entradas.forEach(function (entrada) {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visivel');
+                    observador.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        itens.forEach(function (item) { observador.observe(item); });
+    }
+})();
+</script>
 </body>
 </html>
