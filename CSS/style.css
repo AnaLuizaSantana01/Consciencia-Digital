@@ -73,11 +73,13 @@ h1 span, h2 span { color: var(--azul); }
 .container-home h1 { animation: subir .8s cubic-bezier(.22, 1, .36, 1) both; }
 .container-home .carousel { animation: subir .9s cubic-bezier(.22, 1, .36, 1) .15s both; }
 .carousel-item .slide {
-    height: 280px;
+    height: clamp(220px, 38vw, 420px);
     display: flex; align-items: center; justify-content: center;
     background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
     border-radius: 12px; font-size: 1.25rem;
+    overflow: hidden;
 }
+.carousel-item .slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 
 /*ESPAÇOS PARA FOTO */
 .foto-espaco {
@@ -256,14 +258,19 @@ h1 span, h2 span { color: var(--azul); }
     padding-top: 3.5rem;
     margin-top: 3rem;
 }
-.logo-espaco {
-    display: grid; place-items: center;
-    width: 96px; height: 96px;
-    border: 2px dashed var(--azul);
-    border-radius: 20px;
-    color: var(--azul-claro); font-weight: 600; text-decoration: none;
-    overflow: hidden;
+
+.logo-espaco{
+    color: white;
+    text-decoration: none;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
 }
+
+.logo-espaco:hover{
+    transform: scale(1.1);
+}
+
 .logo-espaco img { width: 100%; height: 100%; object-fit: cover; }
 .rodape-nome { font-size: 1.35rem; font-weight: 700; }
 .rodape-nome span { color: var(--azul); }
